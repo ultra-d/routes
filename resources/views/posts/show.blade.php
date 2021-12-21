@@ -21,12 +21,7 @@
         </style>
     </head>
     <body>
-        <p>Crear Post</p>
-
-        <form action="/posts" method="POST">
-            @csrf
-            <input type="text" name="title" id="title">
-            <input type="text" name="content" id="content">
-            <button type="submit">Enviar</button>
-        </form>
+        <h1>Mostrar el POST</h1>
+        <p>{{ $post -> title }}</p>
+        <p>{{ $post -> content }}</p>
     </body>
