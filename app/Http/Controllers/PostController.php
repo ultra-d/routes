@@ -11,6 +11,12 @@ class PostController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $posts = Post::all(['id', 'title', 'content']);
+        return view('welcome', compact('posts'));
+    }
+
+    public function create()
+    {
+        return view('posts.create');
     }
 }

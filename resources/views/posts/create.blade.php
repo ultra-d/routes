@@ -21,11 +21,12 @@
         </style>
     </head>
     <body>
-        <h1>Creando Rutas con Laravel</h1>
-        @foreach($posts as $post)
-            <p>{{ $post-> title}}</p>
-            <p>{{ $post-> content}}</p>
-            <p>{{ $post-> id}}</p>
+        <p>Crear Post</p>
 
-        @endforeach
+        <form action="/posts" method="post">
+            @csrf
+            <input type="text" name="title" id="title">
+            <input type="text" name="content" id="content">
+            <button type="submit">Enviar</button>
+        </form>
     </body>
